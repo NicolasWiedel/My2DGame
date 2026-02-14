@@ -2,7 +2,8 @@ package de.wiedel.my2dgame.lwjgl3;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
-import de.wiedel.my2dgame.My2DGame;
+import de.wiedel.my2dgame.My2DGame21DeltaExample;
+import de.wiedel.my2dgame.My2DGame21TimerExample;
 
 /** Launches the desktop (LWJGL3) application. */
 public class Lwjgl3Launcher {
@@ -12,7 +13,7 @@ public class Lwjgl3Launcher {
     }
 
     private static Lwjgl3Application createApplication() {
-        return new Lwjgl3Application(new My2DGame(), getDefaultConfiguration());
+        return new Lwjgl3Application(new My2DGame21TimerExample(), getDefaultConfiguration());
     }
 
     private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
