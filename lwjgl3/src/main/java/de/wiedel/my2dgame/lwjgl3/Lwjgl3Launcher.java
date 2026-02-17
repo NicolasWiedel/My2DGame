@@ -4,9 +4,9 @@ import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import de.wiedel.my2dgame.My2DGame221UpdateRenderExample;
 import de.wiedel.my2dgame.My2DGame222ScreenAdapter;
-import de.wiedel.my2dgame.chapter24.My2DGame;
 import de.wiedel.my2dgame.chapter31.AsyncLoadExample;
 import de.wiedel.my2dgame.chapter31.SyncLoadExample;
+import de.wiedel.my2dgame.chapter33.My2DGame;
 
 /** Launches the desktop (LWJGL3) application. */
 public class Lwjgl3Launcher {
@@ -16,7 +16,7 @@ public class Lwjgl3Launcher {
     }
 
     private static Lwjgl3Application createApplication() {
-        return new Lwjgl3Application(new AsyncLoadExample(), getDefaultConfiguration());
+        return new Lwjgl3Application(new My2DGame(), getDefaultConfiguration());
     }
 
     private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
