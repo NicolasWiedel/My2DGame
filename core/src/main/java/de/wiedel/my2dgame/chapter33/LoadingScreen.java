@@ -11,6 +11,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.utils.ScreenUtils;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LoadingScreen implements Screen {
 
     private final My2DGame game;
@@ -93,8 +96,22 @@ public class LoadingScreen implements Screen {
         font.draw(batch,
             String.format("Loading %d%%",
                 (int)(status * 100)),
-            x, y + barEmpty.getHeight() + 20);
+            x + 140, y + barEmpty.getHeight() + 50);
         batch.end();
+    }
+
+    // not working method, only for example
+    private void unloadAssets(){
+        // Suppose levelAssist is a list of file names you loaded from a level
+        List<String> levelAssets = new ArrayList<String>();
+        for (String assetPath : levelAssets){
+            if (manager.isLoaded(assetPath)){
+                manager.unload(assetPath);
+            }
+        }
+
+        // removes all assets and pending (ausstehend) loads
+        manager.clear();
     }
 
     @Override

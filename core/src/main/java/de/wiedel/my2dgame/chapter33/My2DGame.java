@@ -21,4 +21,9 @@ public class My2DGame extends Game {
     public AssetManager getManager() {
         return manager;
     }
+
+    @Override
+    public void dispose() {
+        manager.dispose();
+    }
 }
