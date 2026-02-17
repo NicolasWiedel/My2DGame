@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.utils.ScreenUtils;
 
 public class DrawingSpriteSheets extends ApplicationAdapter {
@@ -16,6 +17,7 @@ public class DrawingSpriteSheets extends ApplicationAdapter {
     private Texture sheet;
     private Texture warriorSheet;
     private Animation<TextureRegion> walkDownAnimation;
+    private TextureRegion[] walkDownFrames;
     private float stateTime;
 
     @Override
@@ -29,12 +31,12 @@ public class DrawingSpriteSheets extends ApplicationAdapter {
         sheet = manager.get("platformer/player/slim_.32x32.png", Texture.class);
 
         // 4x4 sprite sheet
-        warriorSheet = manager.get("platformer/player/slim_.32x32.png", Texture.class);
+        warriorSheet = manager.get("platformer/player/Warrior.png", Texture.class);
         TextureRegion[][] warriorArray = TextureRegion.split(warriorSheet, 16, 16);
-        TextureRegion[] walkDownFrames = new TextureRegion[4];
+        walkDownFrames = new TextureRegion[4];
         System.arraycopy(warriorArray[0], 0, walkDownFrames, 0, 4);
-        walkDownAnimation = new Animation<>(0.1f, walkDownFrames);
-
+        walkDownAnimation = new Animation<TextureRegion>(0.1f, walkDownFrames);
+        walkDownAnimation.setPlayMode(Animation.PlayMode.LOOP);
         batch = new SpriteBatch();
     }
 
@@ -47,10 +49,7 @@ public class DrawingSpriteSheets extends ApplicationAdapter {
 
         TextureRegion playerIdle = new TextureRegion(sheet, 0, 0, 32,32);
         TextureRegion currentFrame = walkDownAnimation.getKeyFrame(stateTime);
-        // 4x4 sprite sheet
 
-
-        // Animate warrior
 
         // draw logo at (100, 150)
         batch.begin();
