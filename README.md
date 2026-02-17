@@ -2,6 +2,8 @@
 
 ## Assets
 assets are used from itch.io "2dfree platformer assets"
+the warrior is from the book "Mastering LibGDX" from packedpub.com
+the mushroom is from Mario Bros.
 
 A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
 

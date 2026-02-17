@@ -35,7 +35,7 @@ public class DrawingSpriteSheets extends ApplicationAdapter {
         TextureRegion[][] warriorArray = TextureRegion.split(warriorSheet, 16, 16);
         walkDownFrames = new TextureRegion[4];
         System.arraycopy(warriorArray[0], 0, walkDownFrames, 0, 4);
-        walkDownAnimation = new Animation<TextureRegion>(0.1f, walkDownFrames);
+        walkDownAnimation = new Animation<TextureRegion>(0.2f, walkDownFrames);
         walkDownAnimation.setPlayMode(Animation.PlayMode.LOOP);
         batch = new SpriteBatch();
     }
@@ -55,7 +55,7 @@ public class DrawingSpriteSheets extends ApplicationAdapter {
         batch.begin();
         batch.draw(playerIdle, 100f, 150f,
             playerIdle.getRegionWidth() * 2, playerIdle.getRegionHeight() * 2);
-        batch.draw(currentFrame, 400, 400, 64, 64);
+        batch.draw(currentFrame, 400, 400, 32, 32);
         batch.end();
     }
 
