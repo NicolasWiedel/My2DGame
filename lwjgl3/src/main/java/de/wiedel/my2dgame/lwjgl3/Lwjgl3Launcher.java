@@ -10,6 +10,7 @@ import de.wiedel.my2dgame.chapter33.My2DGame;
 import de.wiedel.my2dgame.chapter41.AnimationExample;
 import de.wiedel.my2dgame.chapter41.StaticTextureExample;
 import de.wiedel.my2dgame.chapter42.DrawingSpriteSheets;
+import de.wiedel.my2dgame.chapter43.ShapeRendererExample;
 
 /** Launches the desktop (LWJGL3) application. */
 public class Lwjgl3Launcher {
@@ -19,7 +20,7 @@ public class Lwjgl3Launcher {
     }
 
     private static Lwjgl3Application createApplication() {
-        return new Lwjgl3Application(new DrawingSpriteSheets(), getDefaultConfiguration());
+        return new Lwjgl3Application(new ShapeRendererExample(), getDefaultConfiguration());
     }
 
     private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
