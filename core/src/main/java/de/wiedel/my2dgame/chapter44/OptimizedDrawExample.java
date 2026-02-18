@@ -28,6 +28,13 @@ public class OptimizedDrawExample extends ApplicationAdapter {
         // create the animations
         TextureRegion[][] playerArray = TextureRegion.split(playerTexture,64, 64);
         walkRightFrames = new TextureRegion[9];
+        walkLeftFrames = new TextureRegion[9];
+        System.arraycopy(playerArray[11], 0, walkRightFrames, 0, 9);
+        walkRightAnimation = new Animation<>(0.1f,walkRightFrames);
+        walkRightAnimation.setPlayMode(Animation.PlayMode.LOOP);
+        System.arraycopy(playerArray[9], 0, walkLeftFrames, 0, 9);
+        walkLeftAnimation = new Animation<>(0.1f, walkLeftFrames);
+        walkLeftAnimation.setPlayMode(Animation.PlayMode.LOOP);
 
         stateTime = 0f;
     }
@@ -45,11 +52,11 @@ public class OptimizedDrawExample extends ApplicationAdapter {
 
         // draw first animation
         TextureRegion walkRightFrame = walkRightAnimation.getKeyFrame(stateTime);
-        batch.draw(walkRightFrame, 50, 100);
+        batch.draw(walkRightFrame, 50, 100, 128, 128);
 
         // draw second Animation
         TextureRegion walkLeftFrame = walkLeftAnimation.getKeyFrame(stateTime);
-        batch.draw(walkLeftFrame, 200, 100);
+        batch.draw(walkLeftFrame, 200, 100, 128, 128);
 
         batch.end();
     }
