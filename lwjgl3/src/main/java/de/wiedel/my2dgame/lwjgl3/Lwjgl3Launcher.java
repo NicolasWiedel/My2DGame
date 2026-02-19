@@ -14,6 +14,7 @@ import de.wiedel.my2dgame.chapter43.ShapeRendererExample;
 import de.wiedel.my2dgame.chapter44.OptimizedDrawExample;
 import de.wiedel.my2dgame.chapter44.ShaderGroupExample;
 import de.wiedel.my2dgame.chapter44.StaticBackgroundExample;
+import de.wiedel.my2dgame.chapter51.ShaderProgramExample;
 
 /** Launches the desktop (LWJGL3) application. */
 public class Lwjgl3Launcher {
@@ -23,7 +24,7 @@ public class Lwjgl3Launcher {
     }
 
     private static Lwjgl3Application createApplication() {
-        return new Lwjgl3Application(new StaticBackgroundExample(), getDefaultConfiguration());
+        return new Lwjgl3Application(new ShaderProgramExample(), getDefaultConfiguration());
     }
 
     private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
