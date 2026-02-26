@@ -1,6 +1,7 @@
 package de.wiedel.my2dgame.chapter62;
 
 import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.controllers.Controller;
 import com.badlogic.gdx.controllers.ControllerListener;
 import com.badlogic.gdx.controllers.Controllers;
@@ -35,8 +36,9 @@ public class GamepadExample extends ApplicationAdapter implements ControllerList
         // Poll left stick for continuous movement
         Controller c = Controllers.getCurrent();
         if (c != null){
-            float lx = c.getAxis();
-            float ly = c.getAxis();
+            //float lx = c.getAxis();
+            //float ly = c.getAxis();
+            Gdx.app.log("Controller", c.getName());
         }
     }
 
