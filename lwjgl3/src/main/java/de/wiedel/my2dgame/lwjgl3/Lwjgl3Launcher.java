@@ -23,6 +23,7 @@ import de.wiedel.my2dgame.chapter62.MouseExample;
 import de.wiedel.my2dgame.chapter62.TouchExample;
 import de.wiedel.my2dgame.chapter64.TableLayoutExample;
 import de.wiedel.my2dgame.chapter72.OrthogonalTMX;
+import de.wiedel.my2dgame.chapter73.TiledCollisionExample;
 
 /** Launches the desktop (LWJGL3) application. */
 public class Lwjgl3Launcher {
@@ -32,7 +33,7 @@ public class Lwjgl3Launcher {
     }
 
     private static Lwjgl3Application createApplication() {
-        return new Lwjgl3Application(new OrthogonalTMX(), getDefaultConfiguration());
+        return new Lwjgl3Application(new TiledCollisionExample(), getDefaultConfiguration());
     }
 
     private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="left-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" backgroundcolor="#555500" nextlayerid="10" nextobjectid="78">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="left-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" backgroundcolor="#555500" nextlayerid="10" nextobjectid="80">
  <properties>
   <property name="Song" value="town"/>
  </properties>
@@ -4302,6 +4302,9 @@
    <properties>
     <property name="name" value="Solid"/>
    </properties>
+  </object>
+  <object id="79" type="CircleMapObject" x="352" y="672" width="32" height="32">
+   <ellipse/>
   </object>
  </objectgroup>
  <layer id="6" name="Ground Overlay (5) (vor Items)" width="30" height="30">
