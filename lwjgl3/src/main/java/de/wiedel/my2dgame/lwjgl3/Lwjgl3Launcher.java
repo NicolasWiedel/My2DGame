@@ -33,7 +33,7 @@ public class Lwjgl3Launcher {
     }
 
     private static Lwjgl3Application createApplication() {
-        return new Lwjgl3Application(new TiledCollisionExample(), getDefaultConfiguration());
+        return new Lwjgl3Application(new My2DGame(), getDefaultConfiguration());
     }
 
     private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
