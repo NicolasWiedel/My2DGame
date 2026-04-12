@@ -2,8 +2,25 @@ package de.wiedel.my2dgame.lwjgl3;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
-import de.wiedel.my2dgame.chapter14.Chapter14;
-import de.wiedel.my2dgame.chapter23.My2DGame;
+import de.wiedel.my2dgame.My2DGame221UpdateRenderExample;
+import de.wiedel.my2dgame.My2DGame222ScreenAdapter;
+import de.wiedel.my2dgame.chapter31.AsyncLoadExample;
+import de.wiedel.my2dgame.chapter31.SyncLoadExample;
+import de.wiedel.my2dgame.chapter33.My2DGame;
+import de.wiedel.my2dgame.chapter41.AnimationExample;
+import de.wiedel.my2dgame.chapter41.StaticTextureExample;
+import de.wiedel.my2dgame.chapter42.DrawingSpriteSheets;
+import de.wiedel.my2dgame.chapter43.ShapeRendererExample;
+import de.wiedel.my2dgame.chapter44.OptimizedDrawExample;
+import de.wiedel.my2dgame.chapter44.ShaderGroupExample;
+import de.wiedel.my2dgame.chapter44.StaticBackgroundExample;
+import de.wiedel.my2dgame.chapter51.ShaderProgramExample;
+import de.wiedel.my2dgame.chapter61.EventDrivenInputExample;
+import de.wiedel.my2dgame.chapter61.PollingInputExample;
+import de.wiedel.my2dgame.chapter62.GamepadExample;
+import de.wiedel.my2dgame.chapter62.KeybordExample;
+import de.wiedel.my2dgame.chapter62.MouseExample;
+import de.wiedel.my2dgame.chapter62.TouchExample;
 import de.wiedel.my2dgame.chapter64.TableLayoutExample;
 
 /** Launches the desktop (LWJGL3) application. */
@@ -14,7 +31,7 @@ public class Lwjgl3Launcher {
     }
 
     private static Lwjgl3Application createApplication() {
-        return new Lwjgl3Application(new Chapter14(), getDefaultConfiguration());
+        return new Lwjgl3Application(new TableLayoutExample(), getDefaultConfiguration());
     }
 
     private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
