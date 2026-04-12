@@ -38,7 +38,7 @@ public class PlayScreen implements Screen {
     }
 
     private void drawGameFrame(){
-        ScreenUtils.clear(0.1f,0.1f,0.1f,1f);
+        ScreenUtils.clear(0.39f,0.58f,0.93f,1f);
         // batch draw calls here
     }
 
